@@ -1,0 +1,264 @@
+/*
+Theme Name: My Custom Theme
+Theme URI: http://example.com
+Author: Your Name
+Author URI: http://example.com
+Description: A custom WordPress theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: my-custom-theme
+*/
+
+/* Basic Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0; /* Fixing padding values for consistency */
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Background Image for Entire Website */
+body {
+    background-image: url('http://localhost/wordpressup/wp-content/uploads/2024/08/TravellingIMG.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image */
+    background-attachment: scroll; /* Makes the background image scrollable with the content */
+    background-color: #f0f0f0; /* Optional: fallback color */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Site Wrapper for Sticky Footer Layout */
+.site-wrapper {
+    min-height: 100vh; /* Ensures the wrapper takes up at least the full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Content Area */
+.content-area {
+    flex: 1;
+}
+
+/* Site Header */
+.site-header {
+    position: fixed; /* Fixes the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent; /* Ensures the header is transparent */
+    padding: 20px;
+    z-index: 1000; /* Keeps the header above other content */
+    display: flex; /* Aligns items in a single line */
+    justify-content: space-between; /* Distributes space between the items */
+    align-items: center; /* Centers items vertically */
+}
+
+/* Header Branding */
+.site-branding {
+    text-align: left;
+}
+
+.site-branding h1 a {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Primary Menu */
+.primary-menu {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    color: #f76212;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu .current-menu-item a {
+    color: #0073aa;
+}
+
+/* Dropdown Menu */
+.nav-menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+}
+
+.nav-menu li:hover ul {
+    display: block;
+}
+
+.nav-menu li ul li {
+    width: 150px;
+}
+
+.nav-menu li ul a {
+    padding: 8px 15px;
+    color: #f76212;
+}
+
+.nav-menu li ul a:hover {
+    background-color: #333;
+    color: #0073aa;
+}
+
+/* Call Now Button */
+.header-call-button {
+    text-align: right;
+}
+
+.header-call-button .call-now-button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.header-call-button .call-now-button:hover {
+    background-color: #e64a19;
+}
+
+/* Footer Styles */
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ff5722;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ff5722;
+}
+
+.site-footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    font-size: 12px;
+}
+
+/* Style for the Welcome Message */
+.welcome-message {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional background color */
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+.welcome-message h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.welcome-message p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Centered Container */
+.centered-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Adjust the main content area */
+.content-area {
+    margin-top: 80px; /* Adjust based on the header height to push content below the header */
+}
+
+/* Ensure full height layout */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Example CSS for Breadcrumbs */
+.breadcrumbs {
+    font-size: 14px; /* Adjust font size as needed */
+    color: #bd2727; /* Color for the breadcrumb text */
+    padding: 10px 20px; /* Add padding for spacing */
+    margin-top: 80px; /* Ensure it appears below the header */
+
+}
+
+/* Link color in breadcrumbs */
+.breadcrumbs a {
+    color: #0073aa; /* Color for breadcrumb links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.breadcrumbs a:hover {
+    color: #005177; /* Color for breadcrumb links on hover */
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+/* Current page color (non-clickable) */
+.breadcrumbs .current {
+    color: #666; /* Color for the current page breadcrumb */
+}
