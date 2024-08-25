@@ -13,25 +13,25 @@ Text Domain: my-custom-theme
 /* Basic Reset */
 body, h1, h2, h3, p, ul, li, a {
     margin: 0;
-    padding: 0; /* Fixing padding values for consistency */
+    padding: 0; 
     list-style: none;
     text-decoration: none;
 }
 
-/* Background Image for Entire Website */
+
 body {
     background-image: url('http://localhost/wordpressup/wp-content/uploads/2024/08/TravellingIMG.jpg');
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center center; /* Centers the image */
-    background-attachment: scroll; /* Makes the background image scrollable with the content */
-    background-color: #f0f0f0; /* Optional: fallback color */
-    overflow-x: hidden; /* Prevents horizontal scroll */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: scroll;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
 }
 
 /* Site Wrapper for Sticky Footer Layout */
 .site-wrapper {
-    min-height: 100vh; /* Ensures the wrapper takes up at least the full viewport height */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
 }
@@ -43,16 +43,16 @@ body {
 
 /* Site Header */
 .site-header {
-    position: fixed; /* Fixes the header at the top */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
-    background: transparent; /* Ensures the header is transparent */
+    background: transparent; 
     padding: 20px;
-    z-index: 1000; /* Keeps the header above other content */
-    display: flex; /* Aligns items in a single line */
-    justify-content: space-between; /* Distributes space between the items */
-    align-items: center; /* Centers items vertically */
+    z-index: 1000; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
 }
 
 /* Header Branding */
@@ -200,7 +200,7 @@ body {
 .welcome-message {
     text-align: center;
     padding: 50px 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Optional background color */
+    background-color: rgba(255, 255, 255, 0.8);
     margin: 20px auto;
     max-width: 800px;
     border-radius: 8px;
@@ -229,7 +229,7 @@ body {
 
 /* Adjust the main content area */
 .content-area {
-    margin-top: 80px; /* Adjust based on the header height to push content below the header */
+    margin-top: 80px; 
 }
 
 /* Ensure full height layout */
@@ -240,25 +240,25 @@ html, body {
 
 /* Example CSS for Breadcrumbs */
 .breadcrumbs {
-    font-size: 14px; /* Adjust font size as needed */
-    color: #bd2727; /* Color for the breadcrumb text */
-    padding: 10px 20px; /* Add padding for spacing */
-    margin-top: 80px; /* Ensure it appears below the header */
+    font-size: 14px; 
+    color: #bd2727;
+    padding: 10px 20px; 
+    margin-top: 80px; 
 
 }
 
-/* Link color in breadcrumbs */
+
 .breadcrumbs a {
-    color: #0073aa; /* Color for breadcrumb links */
-    text-decoration: none; /* Remove underline from links */
+    color: #0073aa; 
+    text-decoration: none;
 }
 
 .breadcrumbs a:hover {
-    color: #005177; /* Color for breadcrumb links on hover */
-    text-decoration: underline; /* Optional: underline on hover */
+    color: #005177; 
+    text-decoration: underline; 
 }
 
-/* Current page color (non-clickable) */
+
 .breadcrumbs .current {
-    color: #666; /* Color for the current page breadcrumb */
+    color: #666; 
 }
